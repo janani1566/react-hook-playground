@@ -1,25 +1,71 @@
 
-body {
-  background-color: #f5f6fa;
-  font-family: Arial, sans-serif;
+
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
 
-h1 {
-  color: #5c6ac4;
-  font-weight: bold;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-title {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .card {
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 24px;
+  text-align: center;
 }
 
 .card h5 {
-  color: #343a40;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
-button {
-  min-width: 75px;
+.alert {
+  overflow-wrap: anywhere;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+.d-flex {
+  flex-wrap: wrap;
+}
+
+input.form-control {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding: 12px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .app-title {
+    font-size: 24px;
+  }
 }
