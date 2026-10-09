@@ -1,0 +1,25 @@
+
+body {
+  background-color: #f5f6fa;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #5c6ac4;
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h5 {
+  color: #343a40;
+  margin-bottom: 18px;
+}
+
+button {
+  min-width: 75px;
+}
