@@ -15,7 +15,7 @@ export function Stopwatch() {
       setSeconds((current) => current + 1);
     }, 1000);
 
-    // Cleanup runs when paused, reset, or unmounted.
+    // Cleanup when paused or unmounted
     return () => {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
@@ -26,7 +26,7 @@ export function Stopwatch() {
     setIsRunning(false);
     setSeconds(0);
 
-    // Clear the active interval immediately if there is one.
+    // Clear the active interval immediately
     if (intervalRef.current !== null) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
@@ -56,10 +56,14 @@ export function Stopwatch() {
           Pause
         </button>
 
-        <button className="btn btn-danger" onClick={handleReset}>
+        <button
+          className="btn btn-danger"
+          onClick={handleReset}
+        >
           Reset
         </button>
       </div>
     </section>
   );
 }
+

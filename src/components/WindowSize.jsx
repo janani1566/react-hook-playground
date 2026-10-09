@@ -1,7 +1,7 @@
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-export function WindowSize() {
+export const WindowSize = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -11,22 +11,20 @@ export function WindowSize() {
 
     window.addEventListener("resize", handleResize);
 
-    // Empty dependency array: set up the listener on mount.
-    // Cleanup prevents the listener from remaining after unmount.
+    // Remove the listener when the component is unmounted
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <section className="card p-3 h-100">
+    <div className="card p-3 h-100">
       <h5>4. Window Size</h5>
+
       <p className="mb-0">
         Browser width: <strong>{width}px</strong>
       </p>
-      <small className="text-muted">
-        Resize your browser to see the value change.
-      </small>
-    </section>
+    </div>
   );
-}
+};
+

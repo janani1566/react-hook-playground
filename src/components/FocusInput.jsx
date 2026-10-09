@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export const FocusInput = () => {
   const inputRef = useRef(null);
@@ -22,6 +22,7 @@ export const FocusInput = () => {
 
       <input
         ref={inputRef}
+        type="text"
         className="form-control mb-3"
         value={text}
         onChange={(e) => setText(e.target.value)}
@@ -46,3 +47,4 @@ export const FocusInput = () => {
     </div>
   );
 };
+
